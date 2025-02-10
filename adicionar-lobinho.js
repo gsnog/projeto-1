@@ -6,7 +6,7 @@ document.querySelector("div.adicionar-lobo button").addEventListener("click", ()
         lobos.push({
             id: lobos.length + 1,
             nome: document.querySelector("input[name='nome']").value,
-            idade: document.querySelector("input[name='idade']").value,
+            idade: parseInt(document.querySelector("input[name='idade']").value),
             descricao: document.querySelector("textarea").value,
             imagem: document.querySelector("input[name='link-da-foto']").value,
             adotado: false
