@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
-* {
-    margin: 0px;
-    padding: 0px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
     font-family: 'Darker Grotesque';
 }
 
@@ -15,21 +17,14 @@ header{
     align-items: center;
     justify-content: space-around;    
 }
-
-header img{
-    margin-right: 40px;
-}
-
-header .link{
-    text-decoration: none;
+header a{
     font-size: 30px;
     font-weight: 700;
     line-height: 30px;
     color: #333333;
     position: relative;
 }
-
-header .link::after{
+.animacao::after{
     content: " ";
     width: 0%;
     height: 3px;
@@ -40,90 +35,10 @@ header .link::after{
     transition: 0.5s ease-in-out;
 }
 
-header .link:hover::after {
+.animacao:hover::after {
     width: 100%;
 }
 
-.info-lobo {
-    width: 960px;
-    margin: 80px auto;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-}
-
-h2 {
-    width: 597px;
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.info-lobo > div {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
-.info-lobo > img {
-    border-radius: 50%;
-}
-
-.info-adotante {
-    width: 960px;
-    margin: 80px auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.info-adotante > div {
-    display: flex;
-}
-
-.nome {
-    width: 900px;
-    margin-right: 20px;
-}
-
-.nome > input {
-    width: 830px;
-}
-
-.idade {
-    width: 100px;
-    margin-left: auto;
-}
-
-.idade > input {
-    width: 100px;
-}
-
-input {
-    border: none;
-    border-bottom: 1px solid;
-    font-size: 1.2em;
-}
-
-label {
-    font-size: 1.5em;
-    margin: 30px 0px;
-}
-
-.button {
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.button > button {
-    background-color: rgb(44, 86, 128);
-    color: white;
-    width: 209px;
-    height: 60px;
-    padding: 5px;
-    font-size: 1.5em;
-    margin-bottom: 50px;
-}
 
 footer {
     padding: 30px 80px;

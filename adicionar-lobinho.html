@@ -4,26 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Lobinho</title>
+    <link rel="stylesheet" href="adicionar-lobinho.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Darker+Grotesque:wght@300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="adicionar-lobinho.js"></script>
 </head>
 <body>
     <header>
-        <a href="lista-de-lobinhos.html">Nossos Lobinhos</a>
+        <a href="lista-de-lobinhos.html" class="link">Nossos Lobinhos</a>
         <a href="index.html">
             <img src="assets/Group 3.png" alt="Descrição da imagem">
         </a>
-        <a href="quem-somos.html"> Quem Somos</a>
+        <a href="quem-somos.html" class="link"> Quem Somos</a>
     </header>
-    <div class="adicionar-lobo">
-        <h2>Coloque um Lobinho para Adoção</h2>
-        <label for="nome">Nome do Lobinho:</label><br>
-        <input type="text" id="nome" name="nome"><br>
-        <label for="idade">Anos:</label><br>
-        <input type="number" id="idade" name="idade"><br>
-        <label for="link-da-foto">Link da Foto</label><br>
-        <input type="text" id="link-da-foto" name="link-da-foto"><br>
-        <label for="descricao">Descrição</label><br>
-        <textarea id="descricao" name="descricao"></textarea><br>
-        <button>Salvar</button>
+    <div class="square">
+        <div class="adicionar-lobo">
+            <h2>Coloque um Lobinho para Adoção</h2>
+            <div class="dados">
+                <div class="nome">
+                    <label for="nome">Nome do Lobinho:</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+                <div class="idade">
+                    <label for="idade">Anos:</label>
+                    <input type="number" id="idade" name="idade">
+                </div>
+            </div>
+            <div class="foto">
+                <label for="link-da-foto">Link da Foto</label><br>
+                <input type="text" id="link-da-foto" name="link-da-foto"><br>
+                <label for="descricao">Descrição</label><br>
+                <textarea id="descricao" name="descricao" rows="5" cols="78"></textarea>
+            </div>
+            <button>Salvar</button>
+        </div>
     </div>
     <footer>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1873241132193!2d-43.135835124991324!3d-22.906460537858802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99817e444e692b%3A0xfd5e35fb577af2f5!2sUFF%20-%20Instituto%20de%20Computa%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1739198879659!5m2!1spt-BR!2sbr" width="250" height="168" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -39,7 +57,7 @@
         </div>
         <div class="imagem">
             <p>Desenvolvido com</p>
-            <img src="/assets/paws.png" alt="pata" width="104" height="104">
+            <img src="assets/paws.png" alt="pata" width="104" height="104">
         </div>
     </footer>
 </body>
