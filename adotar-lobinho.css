@@ -3,7 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Darker Grotesque';
 }
 
 header{
@@ -130,11 +130,15 @@ footer {
     background-color: rgb(51, 51, 51);
     height: 275px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-
     border-top: 5px solid;
     border-image: linear-gradient(to right, rgb(222, 185, 89), rgb(44, 86, 128)) 1;
+}
+.iframe-texto{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 
 .texto > p {
@@ -146,20 +150,23 @@ footer {
 }
 
 .imagem > p {
-    margin-bottom: 10px;
     color: white;
     font-size: 1em;
 }
 
-.texto > form > button {
-    margin-top: 20px;
+button {
+    margin-top: 15px;
     background-color: rgb(222, 185, 89);
-    width: auto;
-    height: auto;
-    padding: 5px;
+    text-align: center;
+    width: 144px;
+    height: 30px;
     font-size: 1.2em;
     font-weight: bold;
     color: rgb(51, 51, 51);
+
+    &:hover{
+        background-color:  rgb(197, 158, 61);
+    }
 }
 
 .imagem {
