@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="show-lobinho.css">
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="show-lobinho.js"></script>
     <title>Show Lobinho</title>
 </head>
 <body>
@@ -24,10 +25,8 @@
             <div class="fundo-exemplo"></div>
             <img src="assets/image.png" alt="Lobo Exemplo" width="430px" height="328px"><br>
             <div class="botoes">
-                <form action="adotar-lobinho.html">
-                    <button type="submit" class="botao1">Adotar</button>
-                </form>
-                <button class="botao">Excluir</button>
+                <button type="submit" class="botao1" style="display: none;" onclick="adotar()">Adotar</button>
+                <button class="botao" onclick="excluir()">Excluir</button>
             </div>
         </div>
         <div class="textos">
