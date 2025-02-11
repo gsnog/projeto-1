@@ -23,6 +23,6 @@ function adotar() {
             }
         })
         localStorage.setItem('lobos', JSON.stringify(lobos))
-        window.location.href = "index.html"
+        window.location.href = "lista-de-lobinhos.html"
     }
 }

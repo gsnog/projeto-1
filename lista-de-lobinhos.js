@@ -1,5 +1,6 @@
 const objetosPorPagina = 4
 let paginaAtual = 1
+let totalPaginas = null
 
 function anterior() {
     if (paginaAtual > 1) {
@@ -23,14 +24,15 @@ function listar() {
     const adotados = document.querySelector("#mostrar-adotados")
     const inicio = (paginaAtual - 1) * objetosPorPagina
     const fim = inicio + objetosPorPagina
-    let lobosPagina = []
+    let lobosFiltrados = []
     lobos.forEach(lobo => {
         if ((adotados.checked && lobo.adotado) || (!adotados.checked)) {
             if (lobo.nome.toUpperCase().includes(nome.toUpperCase())) {
-                lobosPagina.push(lobo)
+                lobosFiltrados.push(lobo)
             }}
     })
-    lobosPagina = lobosPagina.slice(inicio, fim)
+    totalPaginas = Math.ceil(lobosFiltrados.length / objetosPorPagina)
+    lobosPagina = lobosFiltrados.slice(inicio, fim)
     const modeloEsquerda = document.querySelector("#modeloEsquerda")
     const modeloDireita = document.querySelector("#modeloDireita")
     let divLobo = ""
@@ -47,12 +49,15 @@ function listar() {
         divLobo.querySelector(".idade").innerHTML = `Idade: ${lobo.idade} anos`
         divLobo.querySelector("p:not(.idade)").innerHTML = lobo.descricao
         let botao = divLobo.querySelector("button")
+        let dono = divLobo.querySelector(".adotado")
         if (lobo.adotado) {
             botao.style.backgroundColor = "#7AAC3A"
             botao.innerHTML = "Adotado"
             botao.addEventListener('click', () => {
                 window.location.href = `show-lobinho.html?id=${encodeURIComponent(lobo.id)}`
             })
+            dono.style.display = "block"
+            dono.innerHTML = `Adotado por: ${lobo.nomeDono}`
         } else {
             botao.style.backgroundColor = "#DEB959"
             botao.style.cursor = "pointer"
@@ -78,10 +83,11 @@ function atualizarNumerosPagina() {
     for (let i = Math.max(1, paginaAtual - 2); i <= Math.min(totalPaginas, paginaAtual + 2); i++) {
         const span = document.createElement("span")
         span.setAttribute("onClick", `javascript: irParaPagina(${i})`)
-        span.textContent = i + "  "
+        span.textContent = i
+        span.style.marginRight = "0.5em"
         if (i === paginaAtual) {
-        span.classList.add("pagina-atual")
-        span.style.fontSize = "1.5em"
+            span.classList.add("pagina-atual")
+            span.style.backgroundColor = "#DEB959"
         }
         numerosPagina.appendChild(span)
     }
@@ -111,5 +117,4 @@ const adotados = document.querySelector("#mostrar-adotados")
 adotados.addEventListener("click", () => {
     listar()
 })
-const totalPaginas = Math.ceil(lobos.length / objetosPorPagina)
 listar()

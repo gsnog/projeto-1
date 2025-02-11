@@ -12,6 +12,6 @@ document.querySelector("div.adicionar-lobo button").addEventListener("click", ()
             adotado: false
         })
         localStorage.setItem('lobos', JSON.stringify(lobos))
-        window.location.href = 'index.html'
+        window.location.href = 'lista-de-lobinhos.html'
     }
 })
