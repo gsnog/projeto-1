@@ -264,10 +264,15 @@ main{
 }
 
 .paginas {
-    width: 165px;
+    width: 100em;
+    text-align: center;
     height: 21px;
 }
-.paginas p{
+.paginas span {
+    cursor: pointer;
+}
+
+.paginas p, .paginas span{
     font-size: 20px;
     font-weight: 500;
     line-height: 21px;
